@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html ng-app="zzzjApp">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Entertainment</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content=""/>
+    <meta name="keywords" content="wildridge, public, video clips, post, videoblog, community site, videos, clips, online news, america news, news america"/>
+    <link rel="shortcut icon" href="/images/favicon.ico"/>
+    <link href="/css/style.css" rel="stylesheet" type="text/css" />
+    <script language="javascript" src="js/html5.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="/js/angular.min.js"></script>
+    <script src="/js/controllers.js"></script>
+    <script src="http://vjs.zencdn.net/4.1/video.js"></script>
+    <script src="/js/ui-bootstrap-tpls-0.6.0.js"></script>
+  </head>
+
+<body ng-controller="ZzzjHome">
+
+  <header>
+    <img src="images/Entertainment.jpg" alt=""><div class="TopRight"><span>MONDAY 7 OCTOBER 2013</span> <span><a href="#" title="login">login</a></span> <span>|</span> <span><a href="#" title="Register">Register</a></span>
+    </div>
+    <!-- TopRight end -->
+</header>
+<span class="clear"></span>
+
+<div class="container">
+	<a href="#" title="Entertainment News" class="logo"><img src="images/logo.png" alt=""></a>
+    
+    <div class="socialicons">
+    	<a href="#"><img src="images/follow.png" alt=""></a>
+        <a href="#"><img src="images/rss.png" alt=""></a>
+        <a href="#"><img src="images/email.png" alt=""></a>
+        <a href="#"><img src="images/flike.png" alt=""></a>
+        <a href="#"><img src="images/likecount.png" alt=""></a>
+                
+        <form class="searchform">
+        <input type="text" name="search" class="search-box" />
+        <input type="submit" value="" name="" class="searchbutton">
+        </form>
+    </div>
+      
+       
+    <nav> 
+      <div class="menu"> <span>MENU</span>
+        <ul class="Navigation">
+          <li><a href="/" title="HOME" class="active">HOME</a> </li>
+          <li><a href="/p/News" title="NEWS">NEWS</a></li>
+          <li><a href="/p/Arts" title="PHOTOS">ARTS</a></li>
+          <li><a href="/p/Business" title="STYLE">BUSINESS</a></li>
+          <li><a href="/p/Film" title="RED CARPET">FILM</a></li>
+          <li><a href="/p/Music" title="ROYALS">MUSIC</a></li>
+          <li><a href="/p/People" title="TV WATCH">PEOPLE</a></li>
+          <li><a href="/p/Reviews" title="BABIES">REVIEWS</a></li>
+          <li><a href="/p/Television" title="FOOD">TELEVISION</a></li>          
+        </ul>
+      </div>
+      <!-- menu end -->                                                                                            
+      <span class="clear"></span> </nav>
+    <span class="clear"></span> 
+  <div class="ad1"><img src="images/ad1.jpg" alt=""></div>
+  <!-- ad1 end  -->
+  
+  <section class="contentarea">
+    <aside class="leftcontent">
+    <div class="width55">
+	<div class="blue-title">LATEST ENTERTAINMENT NEWS</div>
+      <div class="recent-news">
+        <div class="Rnewsdiv" ng-repeat="n in topEntertainmentNews">
+          <h4>{{ n.value.title }}</h4>
+         <span class="postedon">{{ n.value.uploadedDate }}</span></div>
+      </div>
+      </div><!-- LATEST ENTERTAINMENT NEWS end -->
+      
+      <div class="width45">
+      	<div class="slideshow"><img src="images/slide1.jpg" alt="" /></div>
+        <div class="slideshow-bt"><h4>Scarlett Johansson again named 'sexiest woman alive' by Esquire</h4>
+        - American actress Scarlett Johansson has been named the sexiest woman alive for the second time by Esquire, the men's lifestyle magazine said on Monday.
+        </div>
+      </div>
+      
+    </aside>
+    
+    <aside class="sidebar">
+      <div class="rightad"><img src="images/right-ad.jpg" width="300" height="250" alt=""></div>
+      <div class="graybox margin10_T">
+        <div class="blue-title">More From Entertainment</div>
+        <div class="pickdiv" ng-repeat="n in topNewsWithImages">
+          <div class="pickthumb"><img ng-src="http://cdee2b9f4d70bbbec792-dc1168873264971973cbf6ea4d0b36c7.r91.cf2.rackcdn.com/{{ n.value.thumbnail }}"/></div>
+          <div class="picdec">{{ n.value.title }}</div>
+        </div>
+      </div>
+      <!-- SportsPictures end -->
+      </aside>
+    
+  </section>
+  <span class="clear"></span>
+  
+  <div class="enterainment-video">
+        <div class="title">ENTERTAINMENT VIDEO</div>
+        <div class="NewsDiv">
+          <div class="thumbdiv"><img src="images/video-thumb-1.jpg"  alt=""> <span class="playtext"></span> </div>
+          <div class="description">Johansson is Esquire's sexiest, "Gravity" earns 55.6 million <span class="small">(1:19) Report</span></div>
+        </div>
+        <!-- NewsDiv end -->
+        <div class="NewsDiv">
+          <div class="thumbdiv"><img src="images/video-thumb-2.jpg"  alt=""> <span class="playtext"></span> </div>
+          <div class="description">Johansson named Esquire's sexiest woman <span class="small">(1:19) Report</span></div>
+        </div>
+        <!-- NewsDiv end -->
+        <div class="NewsDiv">
+          <div class="thumbdiv"><img src="images/video-thumb-3.jpg"  alt=""> <span class="playtext"></span> </div>
+          <div class="description">Prince William takes part in soccer skills session <span class="small">(1:19) Report</span></div>
+        </div>
+        <!-- NewsDiv end -->
+        
+      </div>
+      <!-- ENTERTAINMENT VIDEO end -->
+  
+  <section class="contentarea">
+    <aside class="leftcontent">
+      <div class="entertainment-pictures">
+       <div class="title"><img src="images/Entertainment-pictures.jpg"  alt=""></div>
+       <div class="width80">
+           <div class="NewsDiv">
+              <div class="thumbdiv"><img src="images/Entertainment-pictures-01.jpg"  alt=""> <span class="videotext"></span> </div>
+              <div class="description">Scarlett Johansson: Sexiest woman alive <span class="small">Mon, Oct 7 2013</span></div>
+            </div>
+            <!-- NewsDiv end -->
+            <div class="NewsDiv">
+              <div class="thumbdiv"><img src="images/Entertainment-pictures-02.jpg"  alt=""> <span class="videotext"></span> </div>
+              <div class="description">Miley in the morning <span class="small">Mon, Oct 7 2013</span></div>
+            </div>
+            <!-- NewsDiv end -->
+            <div class="NewsDiv">
+              <div class="thumbdiv"><img src="images/Entertainment-pictures-03.jpg"  alt=""> <span class="videotext"></span> </div>
+              <div class="description">Celebrity sightings <span class="small">Mon, Oct 7 2013</span></div>
+            </div>
+            <!-- NewsDiv end -->
+            <div class="NewsDiv">
+              <div class="thumbdiv"><img src="images/Entertainment-pictures-01.jpg"  alt=""> <span class="videotext"></span> </div>
+              <div class="description">Scarlett Johansson: Sexiest woman alive <span class="small">Mon, Oct 7 2013</span></div>
+            </div>
+            <!-- NewsDiv end -->
+            <div class="NewsDiv">
+              <div class="thumbdiv"><img src="images/Entertainment-pictures-02.jpg"  alt=""> <span class="videotext"></span> </div>
+              <div class="description">Miley in the morning <span class="small">Mon, Oct 7 2013</span></div>
+            </div>
+            <!-- NewsDiv end -->
+            <div class="NewsDiv">
+              <div class="thumbdiv"><img src="images/Entertainment-pictures-03.jpg"  alt=""> <span class="videotext"></span> </div>
+              <div class="description">Celebrity sightings <span class="small">Mon, Oct 7 2013</span></div>
+            </div>
+            <!-- NewsDiv end -->
+       </div>
+       
+      </div><!-- Entertainment Pictures end -->
+      
+      
+      <div class="enterainment-video Reviews">
+        <div class="title">Reviews</div>
+        <div class="NewsDiv">
+          <div class="thumbdiv"><img src="images/reviews-thumb-1.jpg"  alt=""></div>
+          <div class="description">Mexican director Guillermo del Toro to release illustrated book</div>
+        </div>
+        <!-- NewsDiv end -->
+        <div class="NewsDiv">
+          <div class="thumbdiv"><img src="images/reviews-thumb-1.jpg"  alt=""></div>
+          <div class="description">Novel reimagines sister that O'Casey wrote out of history</div>
+        </div>
+        <!-- NewsDiv end -->
+        <div class="NewsDiv">
+          <div class="thumbdiv"><img src="images/reviews-thumb-2.jpg"  alt=""></div>
+          <div class="description">'Foodimals' stalk animated film world of 'Cloudy With a Chance of Meatballs 2'</div>
+        </div>
+        <!-- NewsDiv end -->
+        <!-- NewsDiv end -->
+        <div class="NewsDiv">
+          <div class="thumbdiv"><img src="images/reviews-thumb-1.jpg"  alt=""></div>
+          <div class="description">Mexican director Guillermo del Toro to release illustrated book</div>
+        </div>
+        <!-- NewsDiv end -->
+        
+      </div>
+      <!-- Reviews end -->
+      
+      
+      
+      <div class="margin20_T RecentNews">
+        <div class="blue-title">MORE ENTERTAINMENT NEWS</div>
+        <div class="recent-news">
+          <div class="Rnewsdiv">
+            <h4>Actress Halle Berry gives birth to baby boy</h4>
+            NEW YORK - Actress Halle Berry gave birth to a baby boy on Saturday, her representative confirmed to Reuters.<span class="postedon">Fashion 07 Oct 2013</span> </div>
+          <!-- Rnewsdiv -->
+          <div class="Rnewsdiv">
+            <h4>'Breaking Bad' teacher-turned-druglord gets obit in Albuquerque newspaper</h4>
+            - Fans mourning the loss of the gritty drug drama "Breaking Bad" and its main character, chemistry-teacher-turned-meth-kingpin Walter White, <span class="postedon">Fashion 07 Oct 2013</span> </div>
+          <!-- Rnewsdiv -->
+          <div class="Rnewsdiv">
+            <h4>CBS gives 'Late Show' host David Letterman two-year extension</h4>
+           - U.S. television network CBS has extended its contract with late night talk show host David Letterman through 2015.<span class="postedon">Fashion 07 Oct 2013</span> </div>
+          <!-- Rnewsdiv -->
+          <div class="Rnewsdiv">
+            <h4>OneRepublic victorious in closest UK chart battle of 2013</h4>
+           LONDON - U.S. rock band OneRepublic snatched the top spot in the British singles chart on Sunday, edging out The Vamps in the closest race for the number one position seen all year,<span class="postedon">Fashion 07 Oct 2013</span> </div>
+          <!-- Rnewsdiv -->
+          
+        </div>
+        <!-- recent-news end --> 
+        
+      </div>
+      <!-- RecentNews end --> 
+    </aside>
+    <aside class="sidebar">
+    	<div class="rightad margin20_T"><img src="images/right-ad2.jpg" width="300" height="250" alt=""></div>
+      
+      <div class="SportsPictures margin10_T">
+        
+        <div class="FieldLeft">
+        	<img src="images/tweets.jpg" alt="">
+          <div class="tweets">
+          <img src="images/tweets-thumb.jpg" alt=""><p>RT @pewresearch: See a timeline that accompanies our survey on the most-closely followed stories of 2012 http://pewrsr.ch/VUms8x t. ...
+by john.abell via twitter 12/31/2012 1:44:57 AM</p>
+          <img src="images/tweets-thumb.jpg" alt=""><p>RT @pewresearch: See a timeline that accompanies our survey on the most-closely followed stories of 2012 http://pewrsr.ch/VUms8x t. ...
+by john.abell via twitter 12/31/2012 1:44:57 AM</p>
+          <a href="#" class="more-fields">more tweets</a>
+          </div>
+          </div>
+        <!-- tweets end -->
+        <div class="rightad2 margin10_T"><img src="images/ad-160x600.jpg" alt=""></div>
+        <span class="clear"></span> </div>
+      <!-- SportsPictures end -->
+      
+    </aside>
+    <span class="clear"></span>
+    <div class="ad1 margin20_T"><img src="images/ad1.jpg" alt=""></div>
+  </section>
+  <!-- contentarea end -->
+  <footer> <span class="copy left margin5_T">Copyright &copy; 2013 Entertainment Inc, All rights reserved.</span> <span class="followuson right"> <span class="left margin5_T">Follow Us on:</span> <a href="#"><img src="images/f-share.png" alt=""></a> <a href="#"><img src="images/t-share.png" alt=""></a> <a href="#"><img src="images/in-share.png" alt=""></a> <a href="#"><img src="images/g-share.png" alt=""></a></span> <span class="clear"></span> </footer>
+</div>
+<!-- container end -->
+</body>
+</html>
