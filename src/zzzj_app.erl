@@ -15,7 +15,9 @@ start(_StartType, _StartArgs) ->
 				{"/api/news/topnews", news_topnews_handler, []},
                 {"/api/news/newsrange", news_newsrange_handler, []},     
                 {"/api/news/topnews_with_images", top_news_and_graphics_handler, []},  
+                {"/api/news/topnews_with_images_count_and_skip", top_news_and_graphics_limit_skip_handler, []},  
                 {"/api/news/count", news_count_by_category_handler, []},
+                {"/slideshow", slideshow_handler, []},
                 {"/api/news/get_all", news_get_all_by_category_handler,[]},
                 {"/api/videos/latest", videos_latest_handler , []},
                 {"/api/videos/popular", videos_popular_handler ,[]},
@@ -58,7 +60,14 @@ start(_StartType, _StartArgs) ->
                 		{file, "index.html"},
                 		{mimetypes, {fun mimetypes:path_to_mimes/2, default}}
             		]
-            	}
+            	},
+                {"/test", cowboy_static, 
+                    [
+                        {directory, {priv_dir, zzzj, ["public"]}},
+                        {file, "testslider.html"},
+                        {mimetypes, {fun mimetypes:path_to_mimes/2, default}}
+                    ]
+                }
                 
 			 ]
 		}

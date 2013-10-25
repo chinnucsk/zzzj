@@ -17,10 +17,12 @@
 		 news_top_text_news_with_limit/2,
 		 news_top_text_news_with_limit_and_skip/2,
 		 news_top_text_graphics_news_with_limit/1,
+		 news_top_text_graphics_news_with_limit_skip/2,
 		 news_us_entertainment_url/2,
 		 news_category_url/2,
 		 news_count/1,
-		 news_by_category_limit_skip/3
+		 news_by_category_limit_skip/3,
+		 news_slideshow_url/1
 		]).
 
 
@@ -106,6 +108,14 @@ news_top_text_graphics_news_with_limit(Limit) ->
 	string:concat(Url1,Limit)
 .
 
+news_top_text_graphics_news_with_limit_skip(Limit, Skip) ->
+	%%http://localhost:5984/zzzj/_design/news_and_graphics/_view/by_title_thumb?descending=true&limit=10
+	Url1 = string:concat(?MODULE:news_db_url(), "_design/zzzj/_view/by_title_thumb?descending=true&limit="),
+	Url2 = string:concat(Url1, Limit),
+	Url3 = string:concat(Url2, "&skip="),
+	string:concat(Url3, Skip)
+.
+
 news_category_url(Category, PageNumber) ->
 	%% http://localhost:5984/zzzj/_design/news_by_category/_view/us_news?descending=true&limit=10
 	Skip = (PageNumber  -  1)  * 15,
@@ -137,6 +147,10 @@ news_by_category_limit_skip(Category, Skip, Limit) ->
 	Url3 = string:concat(Url2, "?limit="),
 	Url4 = string:concat(Url3, Limit),
 	Url5 = string:concat(Url4, "&descending=true&skip="),
-	string:concat(Url5, Skip)
-	
+	string:concat(Url5, Skip)	
+.
+
+news_slideshow_url(Limit) ->
+	Url1 = string:concat(?MODULE:news_db_url(), "_design/zzzj/_view/by_title_thumb?descending=true&limit="),
+	string:concat(Url1,Limit)
 .

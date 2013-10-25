@@ -87,8 +87,8 @@
       <div class="graybox margin10_T">
         <div class="blue-title">More From Entertainment</div>
         <div class="pickdiv" ng-repeat="n in topNewsWithImages">
-          <div class="pickthumb"><img ng-src="http://cdee2b9f4d70bbbec792-dc1168873264971973cbf6ea4d0b36c7.r91.cf2.rackcdn.com/{{ n.value.thumbnail }}"/></div>
-          <div class="picdec">{{ n.value.title }}</div>
+          <div class="pickthumb"><a href="/slideshow"><img ng-src="http://cdee2b9f4d70bbbec792-dc1168873264971973cbf6ea4d0b36c7.r91.cf2.rackcdn.com/{{ n.value.thumbnail }}"/></a></div>
+          <div class="picdec"><a href="/slideshow">{{ n.value.title }}</a> -- {{ n.value.uploadedDate }}</div>
         </div>
       </div>
       <!-- SportsPictures end -->
@@ -104,69 +104,14 @@
       <div class="entertainment-pictures">
        <div class="title"><img src="images/Entertainment-pictures.jpg"  alt=""></div>
        <div class="width80">
-           <div class="NewsDiv">
-              <div class="thumbdiv"><img src="images/Entertainment-pictures-01.jpg"  alt=""> <span class="videotext"></span> </div>
-              <div class="description">Scarlett Johansson: Sexiest woman alive <span class="small">Mon, Oct 7 2013</span></div>
-            </div>
-            <!-- NewsDiv end -->
-            <div class="NewsDiv">
-              <div class="thumbdiv"><img src="images/Entertainment-pictures-02.jpg"  alt=""> <span class="videotext"></span> </div>
-              <div class="description">Miley in the morning <span class="small">Mon, Oct 7 2013</span></div>
-            </div>
-            <!-- NewsDiv end -->
-            <div class="NewsDiv">
-              <div class="thumbdiv"><img src="images/Entertainment-pictures-03.jpg"  alt=""> <span class="videotext"></span> </div>
-              <div class="description">Celebrity sightings <span class="small">Mon, Oct 7 2013</span></div>
-            </div>
-            <!-- NewsDiv end -->
-            <div class="NewsDiv">
-              <div class="thumbdiv"><img src="images/Entertainment-pictures-01.jpg"  alt=""> <span class="videotext"></span> </div>
-              <div class="description">Scarlett Johansson: Sexiest woman alive <span class="small">Mon, Oct 7 2013</span></div>
-            </div>
-            <!-- NewsDiv end -->
-            <div class="NewsDiv">
-              <div class="thumbdiv"><img src="images/Entertainment-pictures-02.jpg"  alt=""> <span class="videotext"></span> </div>
-              <div class="description">Miley in the morning <span class="small">Mon, Oct 7 2013</span></div>
-            </div>
-            <!-- NewsDiv end -->
-            <div class="NewsDiv">
-              <div class="thumbdiv"><img src="images/Entertainment-pictures-03.jpg"  alt=""> <span class="videotext"></span> </div>
-              <div class="description">Celebrity sightings <span class="small">Mon, Oct 7 2013</span></div>
+           <div class="NewsDiv" ng-repeat="n in moreTopNewsWithImages">
+              <div class="thumbdiv"><a href="/slideshow"><img ng-src="http://cdee2b9f4d70bbbec792-dc1168873264971973cbf6ea4d0b36c7.r91.cf2.rackcdn.com/{{ n.value.thumbnail }}"  alt=""></a></div>
+              <div class="description"><a href="/slideshow">{{ n.value.title}} </a><span class="small">{{ n.value.uploadedDate }}</span></div>
             </div>
             <!-- NewsDiv end -->
        </div>
        
       </div><!-- Entertainment Pictures end -->
-      
-      
-      <div class="enterainment-video Reviews">
-        <div class="title">Reviews</div>
-        <div class="NewsDiv">
-          <div class="thumbdiv"><img src="images/reviews-thumb-1.jpg"  alt=""></div>
-          <div class="description">Mexican director Guillermo del Toro to release illustrated book</div>
-        </div>
-        <!-- NewsDiv end -->
-        <div class="NewsDiv">
-          <div class="thumbdiv"><img src="images/reviews-thumb-1.jpg"  alt=""></div>
-          <div class="description">Novel reimagines sister that O'Casey wrote out of history</div>
-        </div>
-        <!-- NewsDiv end -->
-        <div class="NewsDiv">
-          <div class="thumbdiv"><img src="images/reviews-thumb-2.jpg"  alt=""></div>
-          <div class="description">'Foodimals' stalk animated film world of 'Cloudy With a Chance of Meatballs 2'</div>
-        </div>
-        <!-- NewsDiv end -->
-        <!-- NewsDiv end -->
-        <div class="NewsDiv">
-          <div class="thumbdiv"><img src="images/reviews-thumb-1.jpg"  alt=""></div>
-          <div class="description">Mexican director Guillermo del Toro to release illustrated book</div>
-        </div>
-        <!-- NewsDiv end -->
-        
-      </div>
-      <!-- Reviews end -->
-      
-      
       
       <div class="margin20_T RecentNews">
         <div class="blue-title">MORE ENTERTAINMENT NEWS</div>
