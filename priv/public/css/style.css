@@ -551,3 +551,13 @@ width:100%;
 }
 
 }
+
+.newsbody{
+	font-size: 12px;
+}
+
+.newsbody p{
+	margin-bottom: 10px;
+}
+
+.floatright {float:right; margin-left:10px;}

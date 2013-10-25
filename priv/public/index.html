@@ -68,7 +68,7 @@
 	<div class="blue-title">LATEST ENTERTAINMENT NEWS</div>
       <div class="recent-news">
         <div class="Rnewsdiv" ng-repeat="n in topEntertainmentNews">
-          <h4>{{ n.value.title }}</h4>
+          <a ng-href="/n/{{ n.value.id }}"><h4>{{ n.value.title }}</h4></a>
          <span class="postedon">{{ n.value.uploadedDate }}</span></div>
       </div>
       </div><!-- LATEST ENTERTAINMENT NEWS end -->
@@ -97,7 +97,7 @@
   </section>
   <span class="clear"></span>
   
-  <div class="enterainment-video">
+    <div class="enterainment-video">
         <div class="title">ENTERTAINMENT VIDEO</div>
         <div class="NewsDiv">
           <div class="thumbdiv"><img src="images/video-thumb-1.jpg"  alt=""> <span class="playtext"></span> </div>
@@ -113,8 +113,7 @@
           <div class="thumbdiv"><img src="images/video-thumb-3.jpg"  alt=""> <span class="playtext"></span> </div>
           <div class="description">Prince William takes part in soccer skills session <span class="small">(1:19) Report</span></div>
         </div>
-        <!-- NewsDiv end -->
-        
+        <!-- NewsDiv end --> 
       </div>
       <!-- ENTERTAINMENT VIDEO end -->
   
@@ -191,7 +190,7 @@
         <div class="blue-title">MORE ENTERTAINMENT NEWS</div>
         <div class="recent-news">
           <div class="Rnewsdiv" ng-repeat="n in belowFoldEntertainmentNews">
-            <h4>{{ n.value.title }}</h4>
+            <a ng-href="/n/{{ n.value.id }}"><h4>{{ n.value.title }}</h4></a>
             <span class="postedon">{{ n.value.uploadedDate }}</span> 
           </div>
           <!-- Rnewsdiv -->
