@@ -15,7 +15,7 @@
 		 news_db_url/0, 
 		 news_db_url/1,
 		 news_top_text_news_with_limit/2,
-		 news_top_text_news_with_limit_and_skip/3,
+		 news_top_text_news_with_limit_and_skip/2,
 		 news_top_text_graphics_news_with_limit/1,
 		 news_category_url/2,
 		 news_count/1,
@@ -90,11 +90,10 @@ news_top_text_news_with_limit(Category,Limit) ->
 	string:concat(Url3, Limit)
 .
 
-news_top_text_news_with_limit_and_skip(Category,Limit, Skip) ->
+news_top_text_news_with_limit_and_skip(Limit, Skip) ->
 	%% http://localhost:5984/zzzj/_design/news_by_category/_view/us_news?descending=true&limit=10
-	Url1 = string:concat(?MODULE:news_db_url(), "_design/news_by_category/_view/" ),
-	Url2 = string:concat(Url1, Category),
-	Url3 = string:concat(Url2, "?descending=true&limit="),
+	Url1 = string:concat(?MODULE:news_db_url(), "_design/zzzj/_view/by_id_title_description" ),	
+	Url3 = string:concat(Url1, "?descending=true&limit="),
 	Url4 = string:concat(Url3, Limit),
 	Url5 = string:concat(Url4, "&skip="),
 	string:concat(Url5, Skip)

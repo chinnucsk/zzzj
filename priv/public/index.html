@@ -16,7 +16,7 @@
     <script src="/js/ui-bootstrap-tpls-0.6.0.js"></script>
   </head>
 
-<body ng-controller="ZzzjHome">
+<body ng-controller="ZzzjHome" ng-cloak>
 
   <header>
     <img src="images/Entertainment.jpg" alt=""><div class="TopRight"><span>MONDAY 7 OCTOBER 2013</span> <span><a href="#" title="login">login</a></span> <span>|</span> <span><a href="#" title="Register">Register</a></span>
@@ -190,23 +190,11 @@
       <div class="margin20_T RecentNews">
         <div class="blue-title">MORE ENTERTAINMENT NEWS</div>
         <div class="recent-news">
-          <div class="Rnewsdiv">
-            <h4>Actress Halle Berry gives birth to baby boy</h4>
-            NEW YORK - Actress Halle Berry gave birth to a baby boy on Saturday, her representative confirmed to Reuters.<span class="postedon">Fashion 07 Oct 2013</span> </div>
+          <div class="Rnewsdiv" ng-repeat="n in belowFoldEntertainmentNews">
+            <h4>{{ n.value.title }}</h4>
+            <span class="postedon">{{ n.value.uploadedDate }}</span> 
+          </div>
           <!-- Rnewsdiv -->
-          <div class="Rnewsdiv">
-            <h4>'Breaking Bad' teacher-turned-druglord gets obit in Albuquerque newspaper</h4>
-            - Fans mourning the loss of the gritty drug drama "Breaking Bad" and its main character, chemistry-teacher-turned-meth-kingpin Walter White, <span class="postedon">Fashion 07 Oct 2013</span> </div>
-          <!-- Rnewsdiv -->
-          <div class="Rnewsdiv">
-            <h4>CBS gives 'Late Show' host David Letterman two-year extension</h4>
-           - U.S. television network CBS has extended its contract with late night talk show host David Letterman through 2015.<span class="postedon">Fashion 07 Oct 2013</span> </div>
-          <!-- Rnewsdiv -->
-          <div class="Rnewsdiv">
-            <h4>OneRepublic victorious in closest UK chart battle of 2013</h4>
-           LONDON - U.S. rock band OneRepublic snatched the top spot in the British singles chart on Sunday, edging out The Vamps in the closest race for the number one position seen all year,<span class="postedon">Fashion 07 Oct 2013</span> </div>
-          <!-- Rnewsdiv -->
-          
         </div>
         <!-- recent-news end --> 
         
@@ -218,7 +206,7 @@
       
       <div class="SportsPictures margin10_T">
         
-        <div class="FieldLeft">
+        <!-- <div class="FieldLeft">
         	<img src="images/tweets.jpg" alt="">
           <div class="tweets">
           <img src="images/tweets-thumb.jpg" alt=""><p>RT @pewresearch: See a timeline that accompanies our survey on the most-closely followed stories of 2012 http://pewrsr.ch/VUms8x t. ...
@@ -227,7 +215,7 @@ by john.abell via twitter 12/31/2012 1:44:57 AM</p>
 by john.abell via twitter 12/31/2012 1:44:57 AM</p>
           <a href="#" class="more-fields">more tweets</a>
           </div>
-          </div>
+          </div> -->
         <!-- tweets end -->
         <div class="rightad2 margin10_T"><img src="images/ad-160x600.jpg" alt=""></div>
         <span class="clear"></span> </div>

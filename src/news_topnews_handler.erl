@@ -23,37 +23,9 @@ terminate(_Reason, _Req, _State) ->
 %% API
 welcome(Req, State) ->
 	{Count, _ } = cowboy_req:qs_val(<<"n">>, Req),
-	{Category, _ } = cowboy_req:qs_val(<<"c">>, Req),
+	{Skip, _ } = cowboy_req:qs_val(<<"s">>, Req),
 	lager:info("Top 10 News items requested"),
-	Url = case binary_to_list(Category) of 
-		"World" ->
-			%Category = "US",
-			zzzj_util:news_top_text_news_with_limit("world_news",binary_to_list(Count));
-		"US" ->
-			%Category = "US",
-			zzzj_util:news_top_text_news_with_limit("us_news",binary_to_list(Count));
-			
-		"Politics" ->
-			%Category = "Politics",
-			zzzj_util:news_top_text_news_with_limit("us_politics",binary_to_list(Count));
-			
-		"Entertainment" ->
-			%Category = "Entertainment",
-			zzzj_util:news_top_text_news_with_limit("us_entertainment",binary_to_list(Count));
-		
-		"Markets" ->
-			%Category = "Entertainment",
-			zzzj_util:news_top_text_news_with_limit("us_markets",binary_to_list(Count));
-
-		"Money" ->
-			%Category = "Entertainment",
-			zzzj_util:news_top_text_news_with_limit("us_money",binary_to_list(Count));
-		_ ->
-			%Category = "None",
-			lager:info("#########################None")
-
-	end,
-
+	Url = zzzj_util:news_top_text_news_with_limit_and_skip(binary_to_list(Count), binary_to_list(Skip)),
 	{ok, "200", _, Response} = ibrowse:send_req(Url,[],get,[],[]),
 	Res = string:sub_string(Response, 1, string:len(Response) -1 ),
 	Body = list_to_binary(Res),
