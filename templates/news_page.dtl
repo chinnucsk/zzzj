@@ -46,14 +46,14 @@
       <div class="menu"> <span>MENU</span>
         <ul class="Navigation">
           <li><a href="/" title="HOME" class="active">HOME</a> </li>
-          <li><a href="/p/News" title="NEWS">NEWS</a></li>
-          <li><a href="/p/Arts" title="PHOTOS">ARTS</a></li>
-          <li><a href="/p/Business" title="STYLE">BUSINESS</a></li>
-          <li><a href="/p/Film" title="RED CARPET">FILM</a></li>
-          <li><a href="/p/Music" title="ROYALS">MUSIC</a></li>
-          <li><a href="/p/People" title="TV WATCH">PEOPLE</a></li>
-          <li><a href="/p/Reviews" title="BABIES">REVIEWS</a></li>
-          <li><a href="/p/Television" title="FOOD">TELEVISION</a></li>          
+          <li><a href="/p/News?page=1" title="NEWS">NEWS</a></li>
+          <li><a href="/p/Arts?page=1" title="PHOTOS">ARTS</a></li>
+          <li><a href="/p/Business?page=1" title="STYLE">BUSINESS</a></li>
+          <li><a href="/p/Film?page=1" title="RED CARPET">FILM</a></li>
+          <li><a href="/p/Music?page=1" title="ROYALS">MUSIC</a></li>
+          <li><a href="/p/People?page=1" title="TV WATCH">PEOPLE</a></li>
+          <li><a href="/p/Reviews?page=1" title="BABIES">REVIEWS</a></li>
+          <li><a href="/p/Television?page=1" title="FOOD">TELEVISION</a></li>          
         </ul>
       </div>
       <!-- menu end -->                                                                                            
